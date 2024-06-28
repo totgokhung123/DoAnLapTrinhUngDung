@@ -29,6 +29,7 @@ public class HoaDon {
     @Column(name = "TrangThai")
     private String TrangThai;
 
+
     @OneToOne
     @JoinColumn(name = "order_id",
             referencedColumnName = "id",
