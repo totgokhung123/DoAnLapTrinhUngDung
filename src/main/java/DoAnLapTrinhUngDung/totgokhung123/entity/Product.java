@@ -1,4 +1,5 @@
 package DoAnLapTrinhUngDung.totgokhung123.entity;
+import DoAnLapTrinhUngDung.totgokhung123.Validator.ValidCategoryId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
@@ -57,10 +58,6 @@ public class Product {
     private List<String> imagePaths;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(
-            name = "category_id",
-            referencedColumnName = "category_id",
-            foreignKey = @ForeignKey(name = "FK_Product_Category")
-    )
+    @ValidCategoryId
     private Category category;
 }

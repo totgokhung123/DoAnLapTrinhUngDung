@@ -34,13 +34,13 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-        auth.setUserDetailsService(userDetailsService());
-        auth.setPasswordEncoder(passwordEncoder());
-        return auth;
-    }
+//    @Bean
+//    public DaoAuthenticationProvider authenticationProvider() {
+//        DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
+//        auth.setUserDetailsService(userDetailsService());
+//        auth.setPasswordEncoder(passwordEncoder());
+//        return auth;
+//    }
 
     @Bean
     public AccessDeniedHandler customAccessDeniedHandler() {
